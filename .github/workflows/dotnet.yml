@@ -23,14 +23,14 @@ jobs:
 
     - name: Build and Push Docker image
       run: |
-        docker build -t lephuocbinh123/test-ci-cd:latest .
-        docker push lephuocbinh123/test-ci-cd:latest
+        docker build -t kazuto100704/test-ci-cd:latest .
+        docker push kazuto100704/test-ci-cd:latest
 
     - name: Trigger Render Deploy
       run: |
         curl -X POST \
           -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
-          https://api.render.com/v1/services/srv-d45njeje5dus73c9jd20/deploys
+          https://api.render.com/v1/services/tea-d2o0nqbe5dus739ia9kg/deploys
 
     # - name: Azure Login
     #   uses: azure/login@v1
